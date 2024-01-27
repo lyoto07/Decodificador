@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Decodificador</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header_container">
+                <img src="./assets/img/iconTablet.png" alt="Logo com a letra 'a' em azul"
+                    class="header_container__logo">
+            </div>
+        </header>
+        <main>
+            <div class="main_container">
+                <textarea type="text" placeholder="Digite seu texto aqui" class="main_container__input"
+                    id="inputText"></textarea>
+            </div>
+            <div class="button_container">
+                <div class="button_container__informativo">
+                    <img src="assets/img/Vector.png" alt="Icone redondo com o sinal de exclamação" class="button_container__icon">
+                    <p class="button_container__texto">Apenas letras minúsculas e sem acento.</p>
+                </div>
+
+                <div class="button_container__botoes">
+                    <button class="container_botao__preenchido" id="criptografar">
+                        Criptografar
+                    </button>
+
+                    <button class="container_botao__transparente" id="descriptografar">
+                        Descriptografar
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <div class="aside_container">
+                <div class="aside_container__hidden" id="aside_off" style="display: none;">
+                    <textarea id="resultText" readonly></textarea>
+                    <div class="button_container__botoes">
+                        <button class="container_botao__preenchido" id="copiar">
+                            Copiar
+                        </button>
+                        <button class="container_botao__transparente" id="clear">
+                            limpar
+                        </button>
+                    </div>
+                </div>
+                <div class="aside_container__default" id="aside_on">
+                    <img src="assets/img/High quality products 1 1 (1).svg" alt="" class="aside_container__icone">
+                    <h2 class="titulo_aside">Nenhuma mensagem encontrada</h2>
+                    <p class="mensagem_aside">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <script type="module" src="assets/js/app.js"></script>
+</body>
+
+</html>
