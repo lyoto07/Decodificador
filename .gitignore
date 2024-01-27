@@ -1,0 +1,39 @@
+# Dependências Node.js
+node_modules/
+
+# Arquivos de configuração
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Arquivos temporários
+*.log
+*.swp
+*.tmp
+
+# Arquivos de construção e saída
+/dist/
+/build/
+
+# Ambiente de desenvolvimento
+.env
+
+# Arquivos específicos do editor
+.vscode/
+.idea/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de cache
+.cache/
+
+# Logs
+*.log
+log.txt
+
+
+Decodificador/assets/js/indexcopy2.js
+Decodificador/assets/js/indexcopy.js
