@@ -35,5 +35,6 @@ Thumbs.db
 log.txt
 
 
-Decodificador/assets/js/indexcopy2.js
+# No seu arquivo .gitignore
 Decodificador/assets/js/indexcopy.js
+Decodificador/assets/js/indexcopy2.js
