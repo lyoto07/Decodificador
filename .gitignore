@@ -36,5 +36,5 @@ log.txt
 
 
 # No seu arquivo .gitignore
-Decodificador/assets/js/indexcopy.js
-Decodificador/assets/js/indexcopy2.js
+./assets/js/indexcopy.js
+./assets/js/indexcopy2.js
