@@ -18,9 +18,12 @@
                     class="header_container__logo">
             </div>
         </header>
+
         <main>
-            <div class="main_container">
-                <textarea type="text" placeholder="Digite seu texto aqui" class="main_container__input"
+            <div class="main_container__input">
+                <textarea oninput='if(this.scrollHeight > this.offsetHeight) this.rows += 1'
+                    placeholder="Digite seu texto aqui" 
+                    class="main_container__textarea"
                     id="inputText"></textarea>
             </div>
             <div class="button_container">
@@ -30,11 +33,11 @@
                 </div>
 
                 <div class="button_container__botoes">
-                    <button class="container_botao__preenchido" id="criptografar">
+                    <button class="btn btn-primary" id="criptografar">
                         Criptografar
                     </button>
 
-                    <button class="container_botao__transparente" id="descriptografar">
+                    <button class="btn btn-secondary" id="descriptografar">
                         Descriptografar
                     </button>
                 </div>
@@ -44,12 +47,14 @@
         <aside>
             <div class="aside_container">
                 <div class="aside_container__hidden" id="aside_off" style="display: none;">
-                    <textarea id="resultText" readonly></textarea>
-                    <div class="button_container__botoes">
-                        <button class="container_botao__preenchido" id="copiar">
+                    <div class="textarea_container">
+                        <span id="resultText" style="overflow-wrap: break-word; white-space: pre-line; "></span>
+                    </div>
+                    <div class="aside_container_btn ">
+                        <button class="btn btn-primary small_btn" id="copiar">
                             Copiar
                         </button>
-                        <button class="container_botao__transparente" id="clear">
+                        <button class="btn btn-secondary small_btn" id="clear">
                             limpar
                         </button>
                     </div>

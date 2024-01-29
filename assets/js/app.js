@@ -7,6 +7,7 @@ const btnToClear = document.getElementById('clear');
 const inputText = document.getElementById('inputText');
 const resultText = document.getElementById('resultText');
 
+const container = document.getElementById("textarea_container");
 const asideElementOff = document.getElementById('aside_off');
 const asideElementOn = document.getElementById('aside_on');
 
@@ -17,12 +18,13 @@ function handleKeyUpEvent() {
 }
 
 function handleEncryptButtonClick() {
-    resultText.value = criptografar(getInput());
+    const texto = criptografar(getInput());
+    resultText.innerHTML = texto;
     toggleAsideDisplay();
 }
 
 function handleDecryptButtonClick() {
-    resultText.value = descriptografar(getInput());
+    resultText.innerText = descriptografar(getInput());
     toggleAsideDisplay();
 }
 
@@ -40,9 +42,9 @@ function getInput() {
 
 async function copyText() {
     try {
-        await navigator.clipboard.writeText(resultText.value);
+        await navigator.clipboard.writeText(resultText.innerText);
 
-        alert('Texto copiado: ' + resultText.value);
+        alert('Texto copiado: ' + resultText.innerText);
     } catch (err) {
         console.error('Erro ao copiar texto: ', err);
     }
@@ -50,7 +52,7 @@ async function copyText() {
 
 function reset() {
     inputText.value = '';
-    resultText.value = '';
+    resultText.innerText = '';
     asideElementOff.style.display = "none"
     asideElementOn.style.display = "flex"
 }
