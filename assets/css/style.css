@@ -32,6 +32,48 @@ body {
     margin: 0 16px 40px;
 }
 
+div#notification-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: fixed;
+    margin-top: 24px;
+    right: 0;
+    width: 65%;
+}
+
+.notification-card {
+    text-align: center;
+    position: fixed;
+    bottom: -100px;
+    color: #fff;
+    right: 0;
+    padding: 15px;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+    width: auto;
+    transition: bottom 0.5s ease;
+}
+
+.notification-card.show {
+    bottom: 87%; 
+    width: 65%;
+}
+
+.notification-card.hide {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.green{
+    background-color: #4CAF50;
+}
+
+.notification-card.red{
+    background-color: #d84646;
+}
+
 .header_container {
     height: 100%;
     margin-bottom: 56px;
@@ -293,6 +335,9 @@ aside {
 
 @media screen and (min-width:926px) {
 
+    body {
+        margin: 40px 40px 0;
+    }
 
     .container {
         display: flex;
@@ -300,7 +345,7 @@ aside {
     }
 
     main {
-        margin: 168px 0 0;
+        margin: 150px 0 0;
     }
 
     .header_container {
@@ -316,13 +361,17 @@ aside {
     }
 
     .main_container__input {
-        height: 65vh;
+        height: 45vh;
 
+    }
+    .button_container {
+        margin-bottom: 0;
     }
 
     aside{
         margin-top: 0;
         max-width: 35%;
+        height: 91vh;
     }
 
     .aside_container{
