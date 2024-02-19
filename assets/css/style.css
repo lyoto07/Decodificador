@@ -396,6 +396,14 @@ aside {
     .aside_container_btn{
         flex-direction: row-reverse;
     }
+
+    div#notification-container {
+        width: 35%;
+    }
+
+    .notification-card.show {
+        width: 35%;
+    }
 }
 
    
